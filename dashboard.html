@@ -2,33 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Upbrimi learning dashboard showing coding progress, community updates, and badges.">
+
   <title>Upbrimi Dashboard</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <h1>Your Dashboard</h1>
+  <header class="dashboard-header">
+    <div class="container">
+      <h1>Your Dashboard</h1>
+    </div>
   </header>
 
-  <main>
-    <section class="progress">
-      <h2>Coding Progress</h2>
-      <p>Python Basics: <progress value="60" max="100"></progress> 60%</p>
-      <p>C Programming: <progress value="40" max="100"></progress> 40%</p>
-    </section>
+  <main class="dashboard">
+    <div class="container">
 
-    <section class="community">
-      <h2>Community Updates</h2>
-      <ul>
-        <li>Alumni AMA scheduled for Friday</li>
-        <li>Peer group project on Web Dev starting soon</li>
-      </ul>
-    </section>
+      <section class="dashboard-card progress-card" aria-labelledby="progress-title">
+        <h2 id="progress-title">Coding Progress</h2>
 
-    <section class="badges">
-      <h2>Your Badges</h2>
-      <p>Beginner Python 🏅 | Forum Contributor 🏅</p>
-    </section>
+        <div class="progress-item">
+          <div class="progress-header">
+            <span>Python Basics</span>
+            <span>60%</span>
+          </div>
+
+          <progress value="60" max="100" aria-label="Python Basics progress">
+            60%
+          </progress>
+        </div>
+
+        <div class="progress-item">
+          <div class="progress-header">
+            <span>C Programming</span>
+            <span>40%</span>
+          </div>
+
+          <progress value="40" max="100" aria-label="C Programming progress">
+            40%
+          </progress>
+        </div>
+      </section>
+
+      <section class="dashboard-card community-card" aria-labelledby="community-title">
+        <h2 id="community-title">Community Updates</h2>
+
+        <ul>
+          <li>Alumni AMA scheduled for Friday</li>
+          <li>Peer group project on Web Dev starting soon</li>
+        </ul>
+      </section>
+
+      <section class="dashboard-card badges-card" aria-labelledby="badges-title">
+        <h2 id="badges-title">Your Badges</h2>
+
+        <ul class="badges-list">
+          <li>🏅 Beginner Python</li>
+          <li>🏅 Forum Contributor</li>
+        </ul>
+      </section>
+
+    </div>
   </main>
 </body>
 </html>
